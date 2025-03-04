@@ -8,7 +8,7 @@ resource "aws_route53_zone" "private" {
 resource "aws_route53_record" "servers" {
   count   = 3
   zone_id = aws_route53_zone.private.zone_id
-  name    = "server${count.index + 1}.dvstech.com"
+  name    = "server${count.index + 1}.dlrasha.cloud"
   type    = "A"
   ttl     = 300
   records = [element(var.instances, count.index)]
